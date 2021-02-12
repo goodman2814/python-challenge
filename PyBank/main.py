@@ -6,7 +6,7 @@
 
 # * Your task is to create a Python script that analyzes the records to calculate each of the following:
 
-#   * The total number of months included in the dataset
+
 
 #   * The net total amount of "Profit/Losses" over the entire period
 
@@ -36,6 +36,10 @@ import csv
 
 csvpath = os.path.join('Resources', 'budget_data.csv')
 
+
+
+
+
 with open(csvpath) as csvfile:
 
     # CSV reader specifies delimiter and variable that holds contents
@@ -43,3 +47,40 @@ with open(csvpath) as csvfile:
 
     print(csvreader)
 
+    # Read the header row first (skip this step if there is no header)
+    csv_header = next(csvreader)
+    print(f"CSV Header: {csv_header}")
+    
+    total_money = 0
+    month_count = 0
+    
+ #   * The total number of months included in the dataset
+    for row in csvreader:
+        month_count = month_count + 1
+        
+    
+
+  #   * The net total amount of "Profit/Losses" over the entire period  
+    #for row in csvreader:
+        total_money += int(row[1])
+        
+       
+    
+#   * Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
+        
+        
+print(avg_money)
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
