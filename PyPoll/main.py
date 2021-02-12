@@ -38,15 +38,38 @@ import os
 import csv
 
 
+##READ IN CSV FILE
+# import csv data
+
 csvpath = os.path.join('Resources', 'election_data.csv')
 
+#   read in the data line by line
 with open(csvpath) as csvfile:
 
     # CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile, delimiter=',')
 
     print(csvreader)
-    
+
+
+
+##ORGANIZE DATA IN PYTHON
+# create empty dictionary called candidate_info
+# iterate through each row of csvdata
+#   if the candidate (row[2]) is not equal to a key in candidate_info
+#       add candidate as new key with empty integer value
+#       add 1 to integer value
+#   else (meaning, if the candidate already exists in our dictionary)
+#       add 1 to matching integer value
+##CALCULATIONS
+# sum of each candidate total = total votes
+# candidate total/total votes = percent won
+# PRINT RESULTS TO TERMINAL
+# for each item in candidate info
+#   print candidate, total votes won, percentage votes won
+# print winner based on popular vote
+# EXPORT RESULTS 
+# export above results to a text file by using csv.write    
 
 
 
