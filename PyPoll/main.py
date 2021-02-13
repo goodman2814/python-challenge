@@ -37,6 +37,9 @@
 import os
 import csv
 
+# create empty dictionary called candidate_info
+candidate_info = {}
+
 
 ##READ IN CSV FILE
 # import csv data
@@ -51,14 +54,19 @@ with open(csvpath) as csvfile:
 
     print(csvreader)
 
-
+# Read the header row first (skip this step if there is no header)
+    csv_header = next(csvreader)
 
 ##ORGANIZE DATA IN PYTHON
-# create empty dictionary called candidate_info
+
 # iterate through each row of csvdata
+    for row in csvreader:
 #   if the candidate (row[2]) is not equal to a key in candidate_info
+        if (row[2]) != candidate_info:            
 #       add candidate as new key with empty integer value
+            candidate_info[row] = int(0) 
 #       add 1 to integer value
+        elif (r)
 #   else (meaning, if the candidate already exists in our dictionary)
 #       add 1 to matching integer value
 ##CALCULATIONS
