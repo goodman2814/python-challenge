@@ -1,14 +1,15 @@
-
+# Import modules
 import os
 import csv
 
-
+# indicate file location
 csvpath = os.path.join('Resources', 'budget_data.csv')
 
-
+#Create lists to iterate through for later
 total_money = []
 month_count = []
 monthly_money = []
+
 
 with open(csvpath) as csvfile:
 
@@ -61,8 +62,11 @@ print(f'Average Change: {avg_change}')
 print(f'Greatest Increase in Profits: {increase_month} {max_value}')
 print(f'Greatest Decrease in Profits: {decrease_month} {min_value}')
 
-# * In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 ## WRITE OUTPUT
+
+# * In addition, your final script should both print the analysis to the terminal and 
+#   export a text file with the results.
+
 # Specify the file to write to
 output_path = os.path.join("Analysis", "Financial_Summary.txt")
 
@@ -85,21 +89,4 @@ with open(output_path, 'w') as csvfile:
     
    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     
