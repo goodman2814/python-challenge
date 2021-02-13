@@ -64,11 +64,14 @@ with open(csvpath) as csvfile:
 #   if the candidate (row[2]) is not equal to a key in candidate_info
         if (row[2]) != candidate_info:            
 #       add candidate as new key with empty integer value
-            candidate_info[row] = int(0) 
+            candidate_info[row[2]] = int(0) 
 #       add 1 to integer value
-        elif (r)
+        elif (row[2]) == candidate_info:
+             candidate_info[row] = (int(0) + 1)
 #   else (meaning, if the candidate already exists in our dictionary)
+        else:
 #       add 1 to matching integer value
+            
 ##CALCULATIONS
 # sum of each candidate total = total votes
 # candidate total/total votes = percent won
@@ -78,6 +81,3 @@ with open(csvpath) as csvfile:
 # print winner based on popular vote
 # EXPORT RESULTS 
 # export above results to a text file by using csv.write    
-
-
-
